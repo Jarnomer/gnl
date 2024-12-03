@@ -17,10 +17,11 @@
 #  define BUFFER_SIZE 100
 # endif
 
+# include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
 
-# define FD_MAX	1024
+# define MAX_FD	1024
 
 typedef struct s_gnl
 {
@@ -29,7 +30,7 @@ typedef struct s_gnl
 }	t_gnl;
 
 char	*get_next_line(int fd);
-int		found_new_line(t_gnl *lst);
+bool	found_new_line(t_gnl *lst);
 int		get_line_len(t_gnl *lst);
 void	prep_next_iter(char *content);
 void	append_list(t_gnl **lst, t_gnl *new, char *s, int fd);

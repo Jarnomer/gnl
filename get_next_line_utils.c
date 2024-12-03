@@ -12,61 +12,67 @@
 
 #include "get_next_line.h"
 
-int	found_new_line(t_gnl *lst)
+bool	found_new_line(t_gnl *lst)
 {
 	int	i;
 
 	if (!lst)
-		return (0);
-	i = -1;
-	while (lst->content[++i])
+		return (false);
+	i = 0;
+	while (lst->content[i])
+	{
 		if (lst->content[i] == '\n')
-			return (1);
-	return (0);
+			return (true);
+		++i;
+	}
+	return (false);
 }
 
 int	get_line_len(t_gnl *lst)
 {
-	int		ln;
+	int		len;
 	int		i;
 
 	if (!lst)
 		return (0);
-	ln = 0;
+	len = 0;
 	while (lst)
 	{
 		i = 0;
 		while (lst->content[i] && lst->content[i] != '\n')
 			++i;
-		ln += i;
+		len += i;
 		if (lst->content[i] == '\n')
-			return (++ln);
+			return (++len);
 		lst = lst->next;
 	}
-	return (ln);
+	return (len);
 }
 
 void	prep_next_iter(char *content)
 {
-	char	*tmp;
+	char	*temp;
 	int		i;
 
 	if (!content)
 		return ;
-	tmp = content;
-	while (*tmp != '\n' && *tmp)
-		++tmp;
-	if (*tmp == '\n')
-		++tmp;
-	i = -1;
-	while (tmp[++i])
-		content[i] = tmp[i];
+	temp = content;
+	while (*temp != '\n' && *temp)
+		++temp;
+	if (*temp == '\n')
+		++temp;
+	i = 0;
+	while (temp[i])
+	{
+		content[i] = temp[i];
+		++i;
+	}
 	content[i] = '\0';
 }
 
 void	append_list(t_gnl **lst, t_gnl *new, char *s)
 {
-	t_gnl	*tmp;
+	t_gnl	*temp;
 
 	if (!lst || !new || !s)
 		return ;
@@ -76,25 +82,25 @@ void	append_list(t_gnl **lst, t_gnl *new, char *s)
 		*lst = new;
 	else
 	{
-		tmp = *lst;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
+		temp = *lst;
+		while (temp->next)
+			temp = temp->next;
+		temp->next = new;
 	}
 }
 
 char	*clean_list(t_gnl **lst, char *line)
 {
-	t_gnl	*tmp;
+	t_gnl	*temp;
 
 	if (!lst || !*lst)
 		return (NULL);
 	while ((*lst)->next)
 	{
-		tmp = (*lst)->next;
+		temp = (*lst)->next;
 		free((*lst)->content);
 		free(*lst);
-		*lst = tmp;
+		*lst = temp;
 	}
 	if (line && *line)
 		return (line);

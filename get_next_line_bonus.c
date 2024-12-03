@@ -15,11 +15,11 @@
 static char	*build_new_line(t_gnl *lst)
 {
 	char	*line;
-	int		ln;
+	int		total_len;
 	int		i;
 
-	ln = get_line_len(lst);
-	line = malloc(sizeof(char) * (ln + 1));
+	total_len = get_line_len(lst);
+	line = malloc(sizeof(char) * (total_len + 1));
 	if (!line || !lst)
 		return (free(line), NULL);
 	while (lst)
@@ -35,38 +35,38 @@ static char	*build_new_line(t_gnl *lst)
 		lst = lst->next;
 		line += i;
 	}
-	return (line - ln);
+	return (line - total_len);
 }
 
-static int	init_new_iter(t_gnl **lst, int fd)
+static int	parse_new_line(t_gnl **lst, int fd)
 {
 	t_gnl	*new;
-	char	*bff;
-	int		bts;
+	char	*buffer;
+	int		bytes_read;
 
 	new = lst[fd];
 	while (!found_new_line(new))
 	{
 		new = malloc(sizeof(t_gnl));
-		bff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-		bts = read(fd, bff, BUFFER_SIZE);
-		if (!bff || !new || bts < 0)
-			return (free(bff), free(new), 0);
-		else if (!bts)
-			return (free(bff), free(new), 1);
-		bff[bts] = '\0';
-		append_list(lst, new, bff, fd);
+		buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (!buffer || !new || bytes_read < 0)
+			return (free(buffer), free(new), -1);
+		else if (!bytes_read)
+			return (free(buffer), free(new), 0);
+		buffer[bytes_read] = '\0';
+		append_list(lst, new, buffer, fd);
 	}
-	return (1);
+	return (0);
 }
 
 char	*get_next_line(int fd)
 {
-	static t_gnl	*lst[FD_MAX];
+	static t_gnl	*lst[MAX_FD];
 	char			*line;
 
-	if (BUFFER_SIZE <= 0 || fd < 0 || fd > FD_MAX - 1
-		|| !init_new_iter(lst, fd))
+	if (BUFFER_SIZE <= 0 || fd < 0 || fd > MAX_FD - 1
+		|| !parse_new_line(lst, fd) == -1)
 		return (clean_list(lst, NULL, fd));
 	line = build_new_line(lst[fd]);
 	return (clean_list(lst, line, fd));
