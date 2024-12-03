@@ -78,22 +78,24 @@ int main(int argc, char **argv) {
   if (fd == -1)
     return 1;
   while (1) {
-      line = get_next_line(fd);
-      if (line == NULL)
-          break;
-      printf("%s", line);
-      free(line);
+    line = get_next_line(fd);
+    if (line == NULL)
+      break;
+    printf("%s", line);
+    free(line);
   }
   close(fd);
   return 0;
 }
 ```
 
-## ⚠️ Error Handling
+## 📑 Details
 
-`clean_list` frees all `unneeded` nodes every time and returns the read `line` that is build by joining each node's `content`.
+`clean_list` frees all `unneeded` nodes every time and moves `head` to `last` node created.
 
-If `malloc` fails or `EOF` is reached, whole list is freed and `NULL` is returned.
+Before that `every` node's `content` is `joined` together and last node's content gets shifted by `prep_next_iter`.
+
+Returns read `line` unless `malloc` fails or `EOF` is reached, then whole list is freed and `NULL` is returned.
 
 ```c
 char *clean_list(t_gnl **lst, char *line)
