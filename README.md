@@ -33,7 +33,7 @@ typedef struct s_gnl
 }  t_gnl;
 ```
 
-`BUFFER_SIZE` defines how many characters are read each time. If not included during compilation, it is defined by header.
+`BUFFER_SIZE` defines the amount of characters read. If not included during compilation, it is defined by header.
 
 ```c
 # ifndef BUFFER_SIZE
