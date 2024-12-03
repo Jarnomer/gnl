@@ -59,6 +59,10 @@ typedef struct s_gnl
 
 GNU `gcc` is required to compile the project.
 
+```bash
+git clone https://github.com/Jarnomer/gnl.git gnl
+```
+
 ## ⚡ Usage
 
 `gnl` has to be compiled with your `main`. Here is an example that takes a file name.
