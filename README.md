@@ -21,9 +21,9 @@
 
 ## 📝 General
 
-Goal of the project is to read file descriptors line by line and is meant to be integrated eventually into `libft`.
+Goal of the project is create a function to read file descriptors line by line and it is meant to be integrated into [libft](https://github.com/Jarnomer/libft).
 
-Project is completed using `linked list` where nodes include read content and address to next node.
+Project uses `linked list` where nodes include read content and address to next node.
 
 ```c
 typedef struct s_gnl
@@ -33,7 +33,7 @@ typedef struct s_gnl
 }  t_gnl;
 ```
 
-`BUFFER_SIZE` defines how many characters are read each time. If not included during runtime, it is set by header.
+`BUFFER_SIZE` defines how many characters are read each time. If not included during compilation, it is defined by header.
 
 ```c
 # ifndef BUFFER_SIZE
@@ -50,7 +50,7 @@ GNU `gcc` is required to compile the project.
 `gnl` has to be compiled with your `main`. Here is an example that takes a file name.
 
 ```bash
-cc main.c get_next_line.c get_next_line_utils.c -o gnl
+cc -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line_utils.c -o gnl
 ```
 
 ```bash
