@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Score-125%2F100-lightgreen?style=for-the-badge" alt="score">
   <img src="https://img.shields.io/github/languages/top/Jarnomer/gnl?style=for-the-badge&logo=c&label=%20&labelColor=gray&color=lightblue" alt="GitHub top language">
 	<img src="https://img.shields.io/github/languages/code-size/Jarnomer/gnl?style=for-the-badge&color=lightyellow" alt="GitHub code size in bytes">
-  <img src="https://img.shields.io/github/directory-file-count/Jarnomer/gnl/sources?style=for-the-badge&color=pink" alt="GitHub repo file or directory count (in path)">
+  <img src="https://img.shields.io/github/directory-file-count/Jarnomer/gnl?style=for-the-badge&color=pink" alt="GitHub repo file or directory count">
 </p>
 
 <p align="center">
@@ -93,9 +93,9 @@ int main(int argc, char **argv) {
 
 `clean_list` frees all `unneeded` nodes every time and moves `head` to `last` node created.
 
-Before that `every` node's `content` is `joined` together and last node's content gets shifted by `prep_next_iter`.
-
 Returns read `line` unless `malloc` fails or `EOF` is reached, then whole list is freed and `NULL` is returned.
+
+Before this `every` node's content is `joined` and last node's content gets shifted by `prep_next_iter`.
 
 ```c
 char *clean_list(t_gnl **lst, char *line)
