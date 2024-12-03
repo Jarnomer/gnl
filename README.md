@@ -19,12 +19,14 @@
 </p>
 
 <div align="center">
-# ToC
-[📝 General](#📝-general)
-[🛠️ Build](#🛠️-build)
+
+# Table of Contents
+[📝 General](#-general)
+[🛠️ Build](#-build)
 [⚡ Usage](#⚡-Usage)
 [📑 Details](#📑-Details)
 [♻️ Resources](#♻️-Resources)
+
 </div>
 
 
