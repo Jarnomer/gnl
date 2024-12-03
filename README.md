@@ -21,9 +21,14 @@
 
 ## 📝 General
 
+
 Goal of the project is to create a function `get_next_line` to read file descriptors line by line
 
 It is meant to be eventually integrated into your [libft](https://github.com/Jarnomer/libft).
+
+Files with `_bonus` suffix support reading `multiple` file descriptors in `parallel`.
+
+Project `passes` many of the 42 `testers`, including [franzinette](https://github.com/xicodomingues/francinette) `strict`, although timeout has to be modified.
 
 Project uses `linked list` where nodes include read content and address to next node.
 
@@ -131,10 +136,14 @@ char *clean_list(t_gnl **lst, char *line)
 }
 ```
 
-In `bonus`, multiple file descriptors must be supported which introduces some minor changes to `gnl` functions.
+## ♻️ Resources
 
-Project `passes` many of the 42 `testers`, including Franzinette `strict`, although timeout has to be modified.
+[franzinette](https://github.com/xicodomingues/francinette) amazing unit test framework for libft and other 42 projects.
 
-For other information, please refer the main page.
+## 4️⃣2️⃣ Footer
+
+For my other 42 project and general information, please refer the [landing page](https://github.com/Jarnomer/Hive42).
+
+I have also created error handling [unit testers](https://github.com/Jarnomer/Hive42) for `pipex`, `so_long` and `cub3d`.
 
 ### Cheers and good luck! 🥳
