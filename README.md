@@ -22,7 +22,7 @@
 
 ## Table of Contents
 [📝 General](#-general)
-[🛠️ Build](#build)
+[🗜️ Build](#build)
 [⚡ Usage](#-usage)
 [🚀 Details](#-details)
 [♻️ Resources](#resources)
@@ -55,7 +55,7 @@ typedef struct s_gnl
 # endif
 ```
 
-## 🛠️ Build
+## 🗜️ Build
 
 GNU `gcc` is required to compile the project.
 
