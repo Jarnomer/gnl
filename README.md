@@ -54,6 +54,8 @@ GNU `gcc` is required to compile the project.
 
 `gnl` has to be compiled with your `main`. Here is an example that takes a file name.
 
+You can also read from `STDIN_FILENO` and end the input with `Crtl + D`.
+
 ```bash
 gcc -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line_utils.c -o gnl
 ```
@@ -83,25 +85,6 @@ int main(int argc, char **argv) {
       free(line);
   }
   close(fd);
-  return 0;
-}
-```
-
-You can also read from `STDIN` and end the input with `Crtl + D`.
-
-```c
-#include "get_next_line.h"
-
-int main(void) {
-  char *line;
-
-  while (1) {
-      line = get_next_line(STDIN_FILENO);
-      if (line == NULL)
-          break;
-      printf("%s", line);
-      free(line);
-  }
   return 0;
 }
 ```
