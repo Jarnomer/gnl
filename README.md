@@ -23,9 +23,9 @@
 # Table of Contents
 [📝 General](#-general)
 [🛠️ Build](#-build)
-[⚡ Usage](#⚡-Usage)
-[📑 Details](#📑-Details)
-[♻️ Resources](#♻️-Resources)
+[⚡ Usage](#-usage)
+[📑 Details](#-details)
+[♻️ Resources](#-resources)
 
 </div>
 
