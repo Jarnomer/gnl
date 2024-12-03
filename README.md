@@ -22,9 +22,7 @@
 ## 📝 General
 
 
-Goal of the project is to create a function `get_next_line` to read file descriptors line by line
-
-It is meant to be eventually integrated into your [libft](https://github.com/Jarnomer/libft).
+Goal of the project is to create a function `get_next_line` to read file descriptors line by line.
 
 Files with `_bonus` suffix support reading `multiple` file descriptors in `parallel`.
 
@@ -57,7 +55,7 @@ GNU `gcc` is required to compile the project.
 `gnl` has to be compiled with your `main`. Here is an example that takes a file name.
 
 ```bash
-cc -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line_utils.c -o gnl
+gcc -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line_utils.c -o gnl
 ```
 
 ```bash
@@ -108,9 +106,11 @@ int main(void) {
 }
 ```
 
-## 🚀 Functions
+## 📑 Flowchart
 
-Function `clean_list` frees all nodes every time new line is build or everything if `malloc` fails or `EOF` is reached.
+`clean_list` frees all `unneeded` nodes every time and returns the read line.
+
+If `malloc` fails or `EOF` is reached, whole list is freed.
 
 ```c
 char *clean_list(t_gnl **lst, char *line)
