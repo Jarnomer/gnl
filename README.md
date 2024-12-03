@@ -23,7 +23,7 @@
 ## Table of Contents
 [📝 General](#-general)
 [🛠️ Build](#-build)
-[⚡ Usage](#⚡-usage)
+[⚡ Usage](#-usage)
 [📑 Details](#-details)
 [♻️ Resources](#-resources)
 
