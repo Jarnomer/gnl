@@ -91,7 +91,7 @@ int main(int argc, char **argv) {
 
 ## ⚠️ Error Handling
 
-`clean_list` frees all `unneeded` nodes every time and returns the read `line`.
+`clean_list` frees all `unneeded` nodes every time and returns the read `line` that is build by joining each node's `content`.
 
 If `malloc` fails or `EOF` is reached, whole list is freed and `NULL` is returned.
 
