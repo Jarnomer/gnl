@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/Type-Solo-violet?style=for-the-badge" alt="type">
+  <img src="https://img.shields.io/badge/Type-Solo-violet?style=for-the-badge" alt="type">
   <img src="https://img.shields.io/github/last-commit/Jarnomer/gnl/main?style=for-the-badge&color=red" alt="GitHub last commit (branch)">
 </p>
 
@@ -24,14 +24,12 @@
 [📝 General](#-general)
 [🛠️ Build](#build)
 [⚡ Usage](#-usage)
-[📑 Details](#-details)
+[🚀 Details](#-details)
 [♻️ Resources](#resources)
 
 </div>
 
-
 ## 📝 General
-
 
 Goal of the project is to create a function `get_next_line` to read file descriptors line by line.
 
@@ -100,7 +98,7 @@ int main(int argc, char **argv) {
 }
 ```
 
-## 📑 Details
+## 🚀 Details
 
 `clean_list` frees all `unneeded` nodes every time and moves `head` to `last` node created.
 
