@@ -89,11 +89,11 @@ int main(int argc, char **argv) {
 }
 ```
 
-## 📑 Flowchart
+## ⚠️ Error Handling
 
-`clean_list` frees all `unneeded` nodes every time and returns the read line.
+`clean_list` frees all `unneeded` nodes every time and returns the read `line`.
 
-If `malloc` fails or `EOF` is reached, whole list is freed.
+If `malloc` fails or `EOF` is reached, whole list is freed and `NULL` is returned.
 
 ```c
 char *clean_list(t_gnl **lst, char *line)
@@ -121,7 +121,7 @@ char *clean_list(t_gnl **lst, char *line)
 
 ## ♻️ Resources
 
-[franzinette](https://github.com/xicodomingues/francinette) amazing unit test framework for libft and other 42 projects.
+[franzinette](https://github.com/xicodomingues/francinette) amazing unit test framework for gnl and other 42 projects.
 
 ## 4️⃣2️⃣ Footer
 
