@@ -18,6 +18,17 @@
   <img src="https://img.shields.io/github/last-commit/Jarnomer/gnl/main?style=for-the-badge&color=red" alt="GitHub last commit (branch)">
 </p>
 
+<div align="center">
+
+# Table of Contents
+- [📝 General](#📝-general)
+- [🛠️ Build](#🛠️-build)
+- [⚡ Usage](#⚡-Usage)
+- [📑 Details](#📑-Details)
+- [♻️ Resources](#♻️-Resources)
+
+</div>
+
 
 ## 📝 General
 
