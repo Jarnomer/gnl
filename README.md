@@ -21,7 +21,9 @@
 
 ## 📝 General
 
-Goal of the project is create a function to read file descriptors line by line and it is meant to be integrated into [libft](https://github.com/Jarnomer/libft).
+Goal of the project is to create a function `get_next_line` to read file descriptors line by line
+
+It is meant to be eventually integrated into your [libft](https://github.com/Jarnomer/libft).
 
 Project uses `linked list` where nodes include read content and address to next node.
 
