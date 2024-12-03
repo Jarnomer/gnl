@@ -1,12 +1,29 @@
-# gnl
+<h1 align="center">
+  <b>get_next_line</b>
+</h1>
 
-Read file descriptors with 🇨, one line at the time 📖.
+<p align="center">
+	<b><i>Read file descriptors 📖 one line at the time.</i></b><br>
+</p>
 
-## General
+<p align="center">
+  <img src="https://img.shields.io/badge/Score-125%2F100-lightgreen?style=for-the-badge" alt="score">
+  <img src="https://img.shields.io/github/languages/top/Jarnomer/gnl?style=for-the-badge&logo=c&label=%20&labelColor=gray&color=lightblue" alt="GitHub top language">
+	<img src="https://img.shields.io/github/languages/code-size/Jarnomer/gnl?style=for-the-badge&color=lightyellow" alt="GitHub code size in bytes">
+  <img src="https://img.shields.io/github/directory-file-count/Jarnomer/gnl/sources?style=for-the-badge&color=pink" alt="GitHub repo file or directory count (in path)">
+</p>
 
-`gnl` aims to read file descriptors line by line and is meant to be integrated eventually into `libft`.
+<p align="center">
+    <img src="https://img.shields.io/badge/Type-Solo-violet?style=for-the-badge" alt="type">
+  <img src="https://img.shields.io/github/last-commit/Jarnomer/gnl/main?style=for-the-badge&color=red" alt="GitHub last commit (branch)">
+</p>
 
-This project is completed using `linked list` where nodes include read content and address to next node.
+
+## 📝 General
+
+Goal of the project is to read file descriptors line by line and is meant to be integrated eventually into `libft`.
+
+Project is completed using `linked list` where nodes include read content and address to next node.
 
 ```c
 typedef struct s_gnl
@@ -23,6 +40,68 @@ typedef struct s_gnl
 #  define BUFFER_SIZE 100
 # endif
 ```
+
+## 🛠️ Build
+
+GNU `gcc` is required to compile the project.
+
+## ⚡ Usage
+
+`gnl` has to be compiled with your `main`. Here is an example that takes a file name.
+
+```bash
+cc main.c get_next_line.c get_next_line_utils.c -o gnl
+```
+
+```bash
+./gnl <file_name>
+```
+
+```c
+#include "get_next_line.h"
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+  char *line;
+  int fd;
+
+  if (argc != 2)
+    return 1;
+  fd = open(argv[1], O_RDONLY);
+  if (fd == -1)
+    return 1;
+  while (1) {
+      line = get_next_line(fd);
+      if (line == NULL)
+          break;
+      printf("%s", line);
+      free(line);
+  }
+  close(fd);
+  return 0;
+}
+```
+
+You can also read from `STDIN` and end the input with `Crtl + D`.
+
+```c
+#include "get_next_line.h"
+
+int main(void) {
+  char *line;
+
+  while (1) {
+      line = get_next_line(STDIN_FILENO);
+      if (line == NULL)
+          break;
+      printf("%s", line);
+      free(line);
+  }
+  return 0;
+}
+```
+
+## 🚀 Functions
 
 Function `clean_list` frees all nodes every time new line is build or everything if `malloc` fails or `EOF` is reached.
 
