@@ -20,7 +20,7 @@
 
 <div align="center">
 
-# Table of Contents
+## Table of Contents
 [📝 General](#-general)
 [🛠️ Build](#-build)
 [⚡ Usage](#-usage)
