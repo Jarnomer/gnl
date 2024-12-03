@@ -21,11 +21,11 @@
 <div align="center">
 
 # Table of Contents
-- [📝 General](#📝-general)
-- [🛠️ Build](#🛠️-build)
-- [⚡ Usage](#⚡-Usage)
-- [📑 Details](#📑-Details)
-- [♻️ Resources](#♻️-Resources)
+[📝 General](#📝-general)
+[🛠️ Build](#🛠️-build)
+[⚡ Usage](#⚡-Usage)
+[📑 Details](#📑-Details)
+[♻️ Resources](#♻️-Resources)
 
 </div>
 
