@@ -25,7 +25,7 @@
 [🛠️ Build](#-build)
 [⚡ Usage](#-usage)
 [📑 Details](#-details)
-[♻️ Resources](#-resources)
+[♻️ Resources](#resources)
 
 </div>
 
