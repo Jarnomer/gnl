@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Score-125%2F100-lightgreen?style=for-the-badge" alt="score">
   <img src="https://img.shields.io/github/languages/top/Jarnomer/gnl?style=for-the-badge&logo=c&label=%20&labelColor=gray&color=lightblue" alt="GitHub top language">
 	<img src="https://img.shields.io/github/languages/code-size/Jarnomer/gnl?style=for-the-badge&color=lightyellow" alt="GitHub code size in bytes">
-  <img src="https://img.shields.io/github/directory-file-count/Jarnomer/gnl?style=for-the-badge&color=pink" alt="GitHub repo file or directory count">
+  <img src="https://img.shields.io/github/directory-file-count/Jarnomer/gnl?type=file&extension=c&style=for-the-badge&label=sources&color=pink" alt="GitHub repo file or directory count">
 </p>
 
 <p align="center">
