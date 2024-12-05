@@ -1,5 +1,5 @@
 <h1 align="center">
-  <b>get_next_line</b>
+  <img src="assets/gnl.png" alt="get_next_line" width="400">
 </h1>
 
 <p align="center">
