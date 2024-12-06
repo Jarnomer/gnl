@@ -60,7 +60,7 @@ typedef struct s_gnl
 GNU `gcc` is required to compile the project.
 
 ```bash
-git clone https://github.com/Jarnomer/gnl.git gnl
+git clone https://github.com/Jarnomer/gnl.git
 ```
 
 ## ⚡ Usage
