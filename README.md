@@ -136,11 +136,11 @@ char *clean_list(t_gnl **lst, char *line)
 
 ## ♻️ Resources
 
-[franzinette](https://github.com/xicodomingues/francinette) amazing unit test framework for gnl and other 42 projects.
+[franzinette](https://github.com/xicodomingues/francinette) amazing unit test framework for `gnl` and other 42 projects.
 
 ## 4️⃣2️⃣ Footer
 
-For my other 42 projects and general information, please refer the [Hive42 page](https://github.com/Jarnomer/Hive42).
+For my other 42 projects and general information, please refer the [Hive42](https://github.com/Jarnomer/Hive42) page.
 
 I have also created error handling [unit testers](https://github.com/Jarnomer/42Testers) for `pipex`, `so_long` and `cub3D`.
 
